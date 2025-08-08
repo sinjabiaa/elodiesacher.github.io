@@ -112,8 +112,7 @@ position: relative;
 	margin-top: 30px;
 	margin-left: 30px;
 	position: fixed;
-	z-index: 10000;
-
+  z-index: 10000;
 }
 
 
@@ -484,22 +483,21 @@ span a {
 	margin-top: 30px;
 	margin-left: 30px;
 	position: absolute;
-	z-index: 10000;
-
+  z-index: 100000;
 }
 
 
     @media screen and (max-width: 825px) {
     #title2 {
     display: block;
-
+z-index: 100000;
     }
     }
 
     @media screen and (max-width: 825px) {
     #title {
     display: none;
-
+z-index: 100000;
     }
     }
 
@@ -548,7 +546,6 @@ display: none;
 
     }
     }
-
 
 
 /* The banner that acts as a background under .top-banner-watan */
