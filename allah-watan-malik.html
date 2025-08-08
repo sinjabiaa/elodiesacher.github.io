@@ -515,6 +515,7 @@ Your browser does not support the video tag.
 <br>
 
 <script>
+
 document.addEventListener('DOMContentLoaded', () => {
   document.body.classList.add('fade-in');
 
@@ -536,6 +537,47 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   });
 });
+
+
+document.addEventListener('DOMContentLoaded', () => {
+  const scrollBanner = document.querySelector('.scroll-banner');
+  const mainWatan = document.querySelector('.main-watan');
+
+  function toggleBannerVisibility() {
+    const mainTop = mainWatan.getBoundingClientRect().top;
+    if (mainTop <= 100) {
+      scrollBanner.classList.add('hide');
+    } else {
+      scrollBanner.classList.remove('hide');
+    }
+  }
+
+  toggleBannerVisibility();
+  window.addEventListener('scroll', toggleBannerVisibility);
+});
+
+document.addEventListener('DOMContentLoaded', () => {
+  const scrollArrow = document.getElementById('scroll-down-arrow');
+
+  function toggleArrowVisibility() {
+    if (window.scrollY > 50) {
+      scrollArrow.classList.add('hide');
+    } else {
+      scrollArrow.classList.remove('hide');
+    }
+  }
+
+  toggleArrowVisibility(); // On load
+  window.addEventListener('scroll', toggleArrowVisibility);
+});
+
+document.getElementById('scroll-down-arrow').addEventListener('click', () => {
+  const mainSection = document.querySelector('.main-watan');
+  if (mainSection) {
+    mainSection.scrollIntoView({ behavior: 'smooth' });
+  }
+});
+	
 </script>
 
 	</body>
