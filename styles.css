@@ -129,11 +129,13 @@ position: relative;
     z-index: 100000;
 }
 
-    @media screen and (max-width: 825px) {
+    @media screen and (max-width: 1150px) {
     .menu {
-width: 800px;
+width: 300px;
 position: relative;
 top: 30px;
+    font-size: 21px;
+    line-height: 26px;
     }
     }
 
@@ -168,9 +170,9 @@ top: 30px;
     .about-content {
     font-size: 21px;
     line-height: 26px;
-    margin-top: 20px;
+    top: 30px;
     left: 25px;
-    width: 85%;
+    width: 84%;
     padding: 15px;
     position: relative;
     overflow-x: hidden;
@@ -386,7 +388,7 @@ display: block;
     .projects-content {
     font-size: 21px;
     line-height: 26px;
-    margin-top: 20px;
+    top: 30px;
     left: 25px;
     width: 85%;
     padding: 15px;
@@ -395,7 +397,6 @@ display: block;
 
     }
     }
-
 
 .f-variant {
 	font-variant-caps: all-small-caps;
