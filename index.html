@@ -429,7 +429,7 @@ A.MAL: <a class="general" href="https://www.instagram.com/p/CfT7febKFjl/?hl=fr" 
 				$("#about").click(function(){
 					
 					$(".about-content").fadeToggle("slow");
-					
+					$(".spage-credits-click").fadeOut("slow");
 				});
 
 			});
@@ -441,7 +441,7 @@ A.MAL: <a class="general" href="https://www.instagram.com/p/CfT7febKFjl/?hl=fr" 
 				$("#projects").click(function(){
 					
 					$(".projects-content").fadeToggle("slow");
-					
+					$(".spage-credits-click").fadeOut("slow");
 				});
 
 			});	
@@ -472,8 +472,7 @@ A.MAL: <a class="general" href="https://www.instagram.com/p/CfT7febKFjl/?hl=fr" 
 				$("#research").click(function(){
 					
 					$(".projects-content").fadeOut("slow");
-
-					// $(".projects-content").hide("slow");
+					$(".spage-credits-click").fadeOut("slow");
 					
 				});
 
@@ -520,7 +519,11 @@ A.MAL: <a class="general" href="https://www.instagram.com/p/CfT7febKFjl/?hl=fr" 
 				});
 
 			});	
-
+			$(function(){
+				$("#title-home").click(function(){
+					$(".spage-credits-click").fadeIn("slow");
+				});
+			});
 
 	});
 
