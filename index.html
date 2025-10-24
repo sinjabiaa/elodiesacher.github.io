@@ -529,6 +529,11 @@ A.MAL: <a class="general" href="https://www.instagram.com/p/CfT7febKFjl/?hl=fr" 
     const container = document.querySelector('.spage-credits-container');
     const toggleBtn = document.querySelector('.spage-credits-click');
 
+	if (!container || !toggleBtn) {
+    return;
+}
+
+
     const initialPosition = {
       left: container.offsetLeft,
       top: container.offsetTop,
