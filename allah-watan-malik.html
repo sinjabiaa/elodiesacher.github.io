@@ -14,8 +14,6 @@
 
 <script>
 
-
-
 document.addEventListener('DOMContentLoaded', () => {
   const images = document.querySelectorAll('.table-img');
   const hoverBg = document.getElementById('hover-bg');
@@ -51,34 +49,34 @@ document.addEventListener('DOMContentLoaded', () => {
 
   const videos = document.querySelectorAll('.table-vid');
 
-videos.forEach(video => {
-  video.addEventListener('mouseenter', () => {
-    clearTimeout(videoTimeout);
+  videos.forEach(video => {
+    video.addEventListener('mouseenter', () => {
+      clearTimeout(videoTimeout);
 
-    hoverBg.style.opacity = '0';
-    hoverBg.style.backgroundImage = '';
+      hoverBg.style.opacity = '0';
+      hoverBg.style.backgroundImage = '';
 
-    video.classList.add('hovered'); // ← AJOUTÉ
+      video.classList.add('hovered');
 
-    const source = video.querySelector('source');
-    if (source) {
-      const src = source.getAttribute('src');
-      hoverBgVideo.src = src;
-      hoverBgVideo.style.opacity = '1';
-      hoverBgVideo.play();
-    }
+      const source = video.querySelector('source');
+      if (source) {
+        const src = source.getAttribute('src');
+        hoverBgVideo.src = src;
+        hoverBgVideo.style.opacity = '1';
+        hoverBgVideo.play();
+      }
+    });
+
+    video.addEventListener('mouseleave', () => {
+      video.classList.remove('hovered');
+
+      hoverBgVideo.style.opacity = '0';
+      videoTimeout = setTimeout(() => {
+        hoverBgVideo.pause();
+        hoverBgVideo.src = '';
+      }, 500);
+    });
   });
-
-  video.addEventListener('mouseleave', () => {
-    video.classList.remove('hovered'); // 
-
-    hoverBgVideo.style.opacity = '0';
-    videoTimeout = setTimeout(() => {
-      hoverBgVideo.pause();
-      hoverBgVideo.src = '';
-    }, 500);
-  });
-});
 });
 
 
@@ -117,49 +115,7 @@ videos.forEach(video => {
 
 		<div class="full-screen-container">
 
-			<div id=typing-vid>			
-
-<div id="typing-vid">     
-  <video 
-    width="100%" 
-    height="auto" 
-    autoplay 
-    muted 
-    loop 
-    playsinline 
-    poster=""
-    preload="auto"
-    id="myVideo"
-  >
-    <source src="images/typing.mp4" type="video/mp4">
-    <source src="images/typing.mov" type="video/mov">
-    Your browser does not support the video tag.
-  </video>
-</div>
-
-</div>
-
-<script type="text/javascript">
-  const video = document.getElementById('myVideo');
-  if (video) {
-    video.play().catch((e) => {
-      // some browsers block autoplay unless user interacts
-      console.log('Autoplay failed:', e);
-    });
-  }
-</script>
-
-<div id="scroll-down-arrow">
-  <svg width="40" height="40" viewBox="0 0 40 40">
-    <circle cx="20" cy="20" r="20" fill="#ad8b3b" />
-    <polyline points="14,18 20,24 26,18" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
-  </svg>
-</div>
-
-
 <div class="main-watan">
-
-
 		
 		<div class="main-text">
 <div id="title-abstract">Exploring the strategies of displaying and staging the royal portrait in Morocco</div>
@@ -404,113 +360,90 @@ Your browser does not support the video tag.
 
 
 <tr>
-
-
-    <th>Staging the royal portrait</th>
+  <th>Staging the royal portrait</th>
   <td>
-<div class="image-container">
-        <a href="https://www.youtube.com/watch?v=XPu-li8H80Q" target="_blank"><img class="table-img3" src=images/resources/media/staging/TC44_51.webp alt="Image"></a>
-          <div class="img-caption">
-          Maroc, Un Mariage Royale (2002), December 20, 2011, TV reportage produced by MatchTV.
+    <div class="image-container">
+      <a href="https://www.youtube.com/watch?v=XPu-li8H80Q" target="_blank"><img class="table-img3" src="images/resources/media/staging/TC44_51.webp" alt="Image"></a>
+      <div class="img-caption">
+        Maroc, Un Mariage Royale (2002), December 20, 2011, TV reportage produced by MatchTV.
       </div>
     </div>
   </td>
 
   <td>
-<div class="image-container">
-        <a href="https://www.youtube.com/watch?v=UbMz-gCa3kw" target="_blank"><img class="table-img3" src=images/resources/media/staging/TC02_06.webp alt="Image"></a>
-          <div class="img-caption">
-          Marche verte au Maroc (1975), Les archives de la RTS.
+    <div class="image-container">
+      <a href="https://www.youtube.com/watch?v=UbMz-gCa3kw" target="_blank"><img class="table-img3" src="images/resources/media/staging/TC02_06.webp" alt="Image"></a>
+      <div class="img-caption">
+        Marche verte au Maroc (1975), Les archives de la RTS.
       </div>
     </div>
   </td>
- <td>
+  <td></td>
 </tr>
 
 
 
 <tr>
-
-
-    <th>Performing a royal presence</th>
-    <td>
-<div class="image-container">
-        <a href="https://www.youtube.com/watch?v=XPu-li8H80Q" target="_blank"><img class="table-img3" src="images/resources/media/performing/TC36_29.webp" alt="Image"></a>
-          <div class="img-caption">
-          Maroc, Un Mariage Royale (2002), December 20, 2011, TV reportage produced by MatchTV.
-          </div>
-    </td>
-</div>
-    <td>
-
-
-<div class="image-container">
-        <a href="https://www.youtube.com/watch?v=UbMz-gCa3kw" target="_blank"><img class="table-img3" src="images/resources/media/performing/TC05_52.webp" alt="Image"></a>
-          <div class="img-caption">
-          Marche verte au Maroc (1975), Les archives de la RTS.
-          </div>
-    </td>
-</div>
-    <td>
-
-
+  <th>Performing a royal presence</th>
+  <td>
+    <div class="image-container">
+      <a href="https://www.youtube.com/watch?v=XPu-li8H80Q" target="_blank"><img class="table-img3" src="images/resources/media/performing/TC36_29.webp" alt="Image"></a>
+      <div class="img-caption">
+        Maroc, Un Mariage Royale (2002), December 20, 2011, TV reportage produced by MatchTV.
+      </div>
+    </div>
+  </td>
+  <td>
+    <div class="image-container">
+      <a href="https://www.youtube.com/watch?v=UbMz-gCa3kw" target="_blank"><img class="table-img3" src="images/resources/media/performing/TC05_52.webp" alt="Image"></a>
+      <div class="img-caption">
+        Marche verte au Maroc (1975), Les archives de la RTS.
+      </div>
+    </div>
+  </td>
+  <td></td>
 </tr>
 
-
-
 <tr>
-
-
-    <th>Storytelling</th>
-    <td>
-<div class="image-container">
-        <a href="https://www.youtube.com/watch?v=wSenVqK0D4I&t=4875s" target="_blank"><img class="table-img3" src="images/resources/media/storytelling/TC01_22_12.webp" alt="Image"></a>
-          <div class="img-caption">
-          Al Massira (La Marche Verte). Director: Youssef Britel. Screenplay: Youssef Britel, David Villemin. Running time: 90min. Morocco 2016.
-          </div>
-    </td>
-</div>
-    <td>
-
-
-<div class="image-container">
-        <a href="https://www.youtube.com/watch?v=wSenVqK0D4I&t=4875s" target="_blank"><img class="table-img3" src="images/resources/media/storytelling/TC01_23_50.webp" alt="Image"></a>
-          <div class="img-caption">
-          Al Massira (La Marche Verte). Director: Youssef Britel. Screenplay: Youssef Britel, David Villemin. Running time: 90min. Morocco 2016.
-          </div>
-    </td>
-</div>
-    <td>
-
-
+  <th>Storytelling</th>
+  <td>
+    <div class="image-container">
+      <a href="https://www.youtube.com/watch?v=wSenVqK0D4I&t=4875s" target="_blank"><img class="table-img3" src="images/resources/media/storytelling/TC01_22_12.webp" alt="Image"></a>
+      <div class="img-caption">
+        Al Massira (La Marche Verte). Director: Youssef Britel. Screenplay: Youssef Britel, David Villemin. Running time: 90min. Morocco 2016.
+      </div>
+    </div>
+  </td>
+  <td>
+    <div class="image-container">
+      <a href="https://www.youtube.com/watch?v=wSenVqK0D4I&t=4875s" target="_blank"><img class="table-img3" src="images/resources/media/storytelling/TC01_23_50.webp" alt="Image"></a>
+      <div class="img-caption">
+        Al Massira (La Marche Verte). Director: Youssef Britel. Screenplay: Youssef Britel, David Villemin. Running time: 90min. Morocco 2016.
+      </div>
+    </div>
+  </td>
+  <td></td>
 </tr>
 
-
 <tr>
-
-
-    <th>Love by proxy</th>
-    <td>
-<div class="image-container">
-        <a href="https://www.youtube.com/watch?v=jxg1H5cZ9uY" target="_blank"><img class="table-img3" src="images/resources/media/love/TC_00_13_14.webp"alt="Image"></a>
-          <div class="img-caption">
-          Roi du Maroc, le règne secret, 2024, Director: Jean-Louis Pérez.
-          </div>
-    </td>
-</div>
-  	<td>
-
-
-<div class="image-container">
-        <a href="https://www.youtube.com/watch?v=XPu-li8H80Q" target="_blank"><img class="table-img3" src="images/resources/media/love/TC5_58.webp" alt="Image"></a>
-          <div class="img-caption">
-          Maroc, Un Mariage Royale (2002), 2011, TV reportage produced by MatchTV.
-          </div>
-    </td>
-</div>
-    <td>
-
-
+  <th>Love by proxy</th>
+  <td>
+    <div class="image-container">
+      <a href="https://www.youtube.com/watch?v=jxg1H5cZ9uY" target="_blank"><img class="table-img3" src="images/resources/media/love/TC_00_13_14.webp" alt="Image"></a>
+      <div class="img-caption">
+        Roi du Maroc, le règne secret, 2024, Director: Jean-Louis Pérez.
+      </div>
+    </div>
+  </td>
+  <td>
+    <div class="image-container">
+      <a href="https://www.youtube.com/watch?v=XPu-li8H80Q" target="_blank"><img class="table-img3" src="images/resources/media/love/TC5_58.webp" alt="Image"></a>
+      <div class="img-caption">
+        Maroc, Un Mariage Royale (2002), 2011, TV reportage produced by MatchTV.
+      </div>
+    </div>
+  </td>
+  <td></td>
 </tr>
 
 </table>
@@ -567,29 +500,6 @@ document.addEventListener('DOMContentLoaded', () => {
   toggleBannerVisibility();
   window.addEventListener('scroll', toggleBannerVisibility);
 });
-
-document.addEventListener('DOMContentLoaded', () => {
-  const scrollArrow = document.getElementById('scroll-down-arrow');
-
-  function toggleArrowVisibility() {
-    if (window.scrollY > 50) {
-      scrollArrow.classList.add('hide');
-    } else {
-      scrollArrow.classList.remove('hide');
-    }
-  }
-
-  toggleArrowVisibility(); // On load
-  window.addEventListener('scroll', toggleArrowVisibility);
-});
-
-document.getElementById('scroll-down-arrow').addEventListener('click', () => {
-  const mainSection = document.querySelector('.main-watan');
-  if (mainSection) {
-    mainSection.scrollIntoView({ behavior: 'smooth' });
-  }
-});
-
 
 </script>
 
