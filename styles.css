@@ -1014,5 +1014,18 @@ display: none;
   }
 }
 
-
-
+@media screen and (max-width: 825px) {
+    .menu-watan,
+    #title-visual,
+    #title-visual-wip,
+    .visual-study,
+    #visual-table,
+    #title-resources,
+    .resources-container,
+    #title-poster,
+    .table-img2,
+    .table-img3,
+    .image-container {
+        display: none;
+    }
+}
