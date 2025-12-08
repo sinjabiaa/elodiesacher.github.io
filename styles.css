@@ -1035,4 +1035,9 @@ display: none;
     .main-watan .main-text {
         padding-top: 80px;
     }
+    
+    /* Consistent bottom spacing for all pages */
+    .main-text {
+        padding-bottom: 40px;  /* Adjust this value to your preference */
+    }
 }
