@@ -1007,14 +1007,12 @@ display: none;
 }
 
 @media screen and (max-width: 825px) {
-  .secondfooter {
-    display: block;
-    position: relative;
-    z-index: 10000;
-  }
-}
-
-@media screen and (max-width: 825px) {
+    .secondfooter {
+        display: block;
+        position: relative;
+        z-index: 10000;
+    }
+    
     .menu-watan,
     #title-visual,
     #title-visual-wip,
@@ -1027,5 +1025,14 @@ display: none;
     .table-img3,
     .image-container {
         display: none;
+    }
+    
+    /* Fix spacing for allah-watan-malik page */
+    .scroll-banner {
+        display: none;
+    }
+    
+    .main-watan .main-text {
+        padding-top: 80px;
     }
 }
